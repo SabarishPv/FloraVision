@@ -2,7 +2,21 @@
 
 **Multi-class flower classification using deep learning and an interactive Gradio application.**
 
-![Python](https://img.shields.io/badge/Python-3.11-blue) ![TensorFlow](https://img.shields.io/badge/Framework-TensorFlow-orange) ![Gradio](https://img.shields.io/badge/Interface-Gradio-green)
+![Python](https://img.shields.io/badge/Python-3.11-3776AB) ![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-FF6F00) ![Keras](https://img.shields.io/badge/Keras-Neural%20Networks-D00000) ![Gradio](https://img.shields.io/badge/Gradio-Local%20App-FF7C00)
+
+## Application preview
+
+### Flower classification
+
+![Gradio interface](assets/gradio_interface.png)
+
+### Prediction example
+
+![Top-5 flower predictions](assets/prediction_example.png)
+
+### Model performance
+
+![Model performance dashboard](assets/model_performance.png)
 
 ## Overview
 
@@ -29,21 +43,7 @@ The original five categories are daisy, dandelion, roses, sunflowers and tulips.
 
 ## End-to-end workflow
 
-```mermaid
-flowchart TD
-    A[Flower Photos and Oxford 102] --> B[Merge and clean images]
-    B --> C[RGB, resize and normalize]
-    C --> D[Stratified 80 / 10 / 10 split]
-    D --> E[Train and compare LNN, DNN, CNN]
-    D --> F[Augmentation and MobileNetV2 transfer learning]
-    F --> G[Selective fine-tuning]
-    E --> H[Select by validation accuracy]
-    F --> H
-    G --> H
-    H --> I[Held-out test evaluation]
-    I --> J[Export Keras model and metadata]
-    J --> K[Local Gradio application]
-```
+![FloraVision architecture](assets/architecture.svg)
 
 ## Implementation stages
 
@@ -142,7 +142,12 @@ FloraVision/
 │   ├── hyperparameter_results.csv
 │   ├── classification_report.csv
 │   └── confusion_matrix.png
+├── TEST_IMAGES/
 └── assets/
+    ├── architecture.svg
+    ├── gradio_interface.png
+    ├── prediction_example.png
+    └── model_performance.png
 ```
 
 ## Run locally
@@ -163,11 +168,7 @@ On Windows, activate with `venv\Scripts\activate` instead. Open **http://127.0.0
 
 The application contains four tabs: Flower Classification, Model Performance, Flower Categories and About Project. It loads the exported Keras model, class mapping and evaluation metadata, and reports the five highest-scoring categories and processing time.
 
-<!-- Add screenshots after saving them in assets/:
-![Gradio interface](assets/gradio_interface.png)
-![Prediction example](assets/prediction_example.png)
-![Model performance](assets/model_performance.png)
--->
+
 
 ## Reproduce training
 

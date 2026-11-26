@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="690" viewBox="0 0 1000 690">
+<rect width="1000" height="690" rx="20" fill="#f0f5f1"/>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#527565"/></marker></defs>
+<text x="40" y="42" font-family="Arial, sans-serif" font-size="30" fill="#17382b" font-weight="bold" text-anchor="start">FloraVision</text>
+<text x="40" y="68" font-family="Arial, sans-serif" font-size="14" fill="#527565" font-weight="bold" text-anchor="start">END-TO-END CLASSIFICATION PIPELINE</text>
+<rect x="30" y="90" width="940" height="120" rx="10" fill="#ffffff" stroke="#c8d9cf"/>
+<text x="48" y="115" font-family="Arial, sans-serif" font-size="15" fill="#397052" font-weight="bold" text-anchor="start">01  /  DATA ENGINEERING</text>
+<rect x="30" y="225" width="940" height="155" rx="10" fill="#ffffff" stroke="#c8d9cf"/>
+<text x="48" y="250" font-family="Arial, sans-serif" font-size="15" fill="#397052" font-weight="bold" text-anchor="start">02  /  MODEL DEVELOPMENT</text>
+<rect x="30" y="395" width="940" height="120" rx="10" fill="#ffffff" stroke="#c8d9cf"/>
+<text x="48" y="420" font-family="Arial, sans-serif" font-size="15" fill="#397052" font-weight="bold" text-anchor="start">03  /  EVALUATION</text>
+<rect x="30" y="530" width="940" height="120" rx="10" fill="#ffffff" stroke="#c8d9cf"/>
+<text x="48" y="555" font-family="Arial, sans-serif" font-size="15" fill="#397052" font-weight="bold" text-anchor="start">04  /  LOCAL DEPLOYMENT</text>
+<rect x="48" y="130" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="183.0" y="153" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Two source datasets</text>
+<text x="183.0" y="173" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Flower Photos + Oxford 102</text>
+<rect x="365" y="130" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="500.0" y="153" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Clean and preprocess</text>
+<text x="500.0" y="173" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">RGB · 224 × 224 · scale 0–1</text>
+<rect x="682" y="130" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="817.0" y="153" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Stratified split</text>
+<text x="817.0" y="173" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">80% train · 10% val · 10% test</text>
+<path d="M318 159 L365 159" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<path d="M635 159 L682 159" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<rect x="48" y="270" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="183.0" y="293" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">LNN / tuned LNN</text>
+<text x="183.0" y="313" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Linear baseline + experiments</text>
+<rect x="365" y="270" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="500.0" y="293" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">DNN / CNN</text>
+<text x="500.0" y="313" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Dense and convolutional models</text>
+<rect x="682" y="270" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="817.0" y="293" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">MobileNetV2</text>
+<text x="817.0" y="313" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Augmentation + transfer learning</text>
+<text x="817" y="351" font-family="Arial, sans-serif" font-size="15" fill="#397052" font-weight="bold" text-anchor="middle">↓  Selective fine-tuning</text>
+<text x="500" y="369" font-family="Arial, sans-serif" font-size="14" fill="#476454" font-weight="normal" text-anchor="middle">Compare all candidates on validation data</text>
+<rect x="48" y="435" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="183.0" y="458" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Select best model</text>
+<text x="183.0" y="478" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Validation accuracy / loss</text>
+<rect x="365" y="435" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="500.0" y="458" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Held-out test</text>
+<text x="500.0" y="478" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Accuracy · F1 · Top-5</text>
+<rect x="682" y="435" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="817.0" y="458" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Export artifacts</text>
+<text x="817.0" y="478" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Keras · JSON · CSV reports</text>
+<path d="M318 464 L365 464" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<path d="M635 464 L682 464" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<rect x="48" y="570" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="183.0" y="593" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Upload flower image</text>
+<text x="183.0" y="613" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Local Gradio interface</text>
+<rect x="365" y="570" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="500.0" y="593" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Preprocess + infer</text>
+<text x="500.0" y="613" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Saved model · no retraining</text>
+<rect x="682" y="570" width="270" height="58" rx="10" fill="#e5f0e8" stroke="#b7cfc0"/>
+<text x="817.0" y="593" font-family="Arial, sans-serif" font-size="17" fill="#17382b" font-weight="bold" text-anchor="middle">Display predictions</text>
+<text x="817.0" y="613" font-family="Arial, sans-serif" font-size="13" fill="#476454" font-weight="normal" text-anchor="middle">Top-5 scores + model metrics</text>
+<path d="M318 599 L365 599" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<path d="M635 599 L682 599" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<path d="M500 210 L500 225" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<path d="M500 380 L500 395" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<path d="M500 515 L500 530" stroke="#527565" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<text x="500" y="673" font-family="Arial, sans-serif" font-size="13" fill="#527565" font-weight="normal" text-anchor="middle">TensorFlow / Keras  •  Google Colab training  •  Local Gradio inference</text>
+</svg>
