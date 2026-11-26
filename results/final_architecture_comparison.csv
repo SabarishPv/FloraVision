@@ -1,0 +1,6 @@
+Model,Parameters,Validation Accuracy (%),Validation Loss,File
+MobileNetV2 Fine-Tuned,2612134,89.36708569526672,0.35143229365348816,best_finetuned.keras
+MobileNetV2 Transfer Learning,2612134,87.25738525390625,0.4338534474372864,best_transfer.keras
+CNN,436390,69.11392211914062,1.0890008211135864,best_cnn.keras
+DNN,38583014,23.6286923289299,3.277482509613037,best_dnn.keras
+Optimized LNN,15353958,19.156117737293243,3.2555830478668213,best_lnn.keras

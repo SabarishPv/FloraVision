@@ -1,0 +1,16 @@
+Metric,Value
+Selected Model,MobileNetV2 Fine-Tuned
+Number of Classes,102
+Training Images,9480
+Validation Images,1185
+Testing Images,1186
+Image Dimensions,224 x 224 x 3
+Model Parameters,2612134
+Validation Accuracy (%),89.36708569526672
+Test Accuracy (%),88.27993273735046
+Test Loss,0.40674352645874023
+Macro Precision (%),90.7038345324751
+Macro Recall (%),86.53531227708163
+Macro F1-Score (%),87.202968179859
+Weighted F1-Score (%),88.24294201099727
+Top-5 Accuracy (%),98.06070826306915
